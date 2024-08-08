@@ -1,0 +1,337 @@
+# this is an auto generated file. This will be overwritten
+
+mutation CreateDepartment(
+  $input: CreateDepartmentInput!
+  $condition: ModelDepartmentConditionInput
+) {
+  createDepartment(input: $input, condition: $condition) {
+    id
+    departmentName
+    manager {
+      id
+      employeeName
+      age
+      createdAt
+      updatedAt
+      departmentEmployeesId
+      employeeDepartmentId
+      owner
+      __typename
+    }
+    employees {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    departmentManagerId
+    owner
+    __typename
+  }
+}
+
+mutation UpdateDepartment(
+  $input: UpdateDepartmentInput!
+  $condition: ModelDepartmentConditionInput
+) {
+  updateDepartment(input: $input, condition: $condition) {
+    id
+    departmentName
+    manager {
+      id
+      employeeName
+      age
+      createdAt
+      updatedAt
+      departmentEmployeesId
+      employeeDepartmentId
+      owner
+      __typename
+    }
+    employees {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    departmentManagerId
+    owner
+    __typename
+  }
+}
+
+mutation DeleteDepartment(
+  $input: DeleteDepartmentInput!
+  $condition: ModelDepartmentConditionInput
+) {
+  deleteDepartment(input: $input, condition: $condition) {
+    id
+    departmentName
+    manager {
+      id
+      employeeName
+      age
+      createdAt
+      updatedAt
+      departmentEmployeesId
+      employeeDepartmentId
+      owner
+      __typename
+    }
+    employees {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    departmentManagerId
+    owner
+    __typename
+  }
+}
+
+mutation CreateEmployee(
+  $input: CreateEmployeeInput!
+  $condition: ModelEmployeeConditionInput
+) {
+  createEmployee(input: $input, condition: $condition) {
+    id
+    employeeName
+    age
+    department {
+      id
+      departmentName
+      createdAt
+      updatedAt
+      departmentManagerId
+      owner
+      __typename
+    }
+    projects {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    departmentEmployeesId
+    employeeDepartmentId
+    owner
+    __typename
+  }
+}
+
+mutation UpdateEmployee(
+  $input: UpdateEmployeeInput!
+  $condition: ModelEmployeeConditionInput
+) {
+  updateEmployee(input: $input, condition: $condition) {
+    id
+    employeeName
+    age
+    department {
+      id
+      departmentName
+      createdAt
+      updatedAt
+      departmentManagerId
+      owner
+      __typename
+    }
+    projects {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    departmentEmployeesId
+    employeeDepartmentId
+    owner
+    __typename
+  }
+}
+
+mutation DeleteEmployee(
+  $input: DeleteEmployeeInput!
+  $condition: ModelEmployeeConditionInput
+) {
+  deleteEmployee(input: $input, condition: $condition) {
+    id
+    employeeName
+    age
+    department {
+      id
+      departmentName
+      createdAt
+      updatedAt
+      departmentManagerId
+      owner
+      __typename
+    }
+    projects {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    departmentEmployeesId
+    employeeDepartmentId
+    owner
+    __typename
+  }
+}
+
+mutation CreateProject(
+  $input: CreateProjectInput!
+  $condition: ModelProjectConditionInput
+) {
+  createProject(input: $input, condition: $condition) {
+    id
+    projectName
+    employees {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+
+mutation UpdateProject(
+  $input: UpdateProjectInput!
+  $condition: ModelProjectConditionInput
+) {
+  updateProject(input: $input, condition: $condition) {
+    id
+    projectName
+    employees {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+
+mutation DeleteProject(
+  $input: DeleteProjectInput!
+  $condition: ModelProjectConditionInput
+) {
+  deleteProject(input: $input, condition: $condition) {
+    id
+    projectName
+    employees {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+
+mutation CreateEmployeeProjects(
+  $input: CreateEmployeeProjectsInput!
+  $condition: ModelEmployeeProjectsConditionInput
+) {
+  createEmployeeProjects(input: $input, condition: $condition) {
+    id
+    employee {
+      id
+      employeeName
+      age
+      createdAt
+      updatedAt
+      departmentEmployeesId
+      employeeDepartmentId
+      owner
+      __typename
+    }
+    project {
+      id
+      projectName
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    createdAt
+    updatedAt
+    employeeProjectsId
+    projectEmployeesId
+    owner
+    __typename
+  }
+}
+
+mutation UpdateEmployeeProjects(
+  $input: UpdateEmployeeProjectsInput!
+  $condition: ModelEmployeeProjectsConditionInput
+) {
+  updateEmployeeProjects(input: $input, condition: $condition) {
+    id
+    employee {
+      id
+      employeeName
+      age
+      createdAt
+      updatedAt
+      departmentEmployeesId
+      employeeDepartmentId
+      owner
+      __typename
+    }
+    project {
+      id
+      projectName
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    createdAt
+    updatedAt
+    employeeProjectsId
+    projectEmployeesId
+    owner
+    __typename
+  }
+}
+
+mutation DeleteEmployeeProjects(
+  $input: DeleteEmployeeProjectsInput!
+  $condition: ModelEmployeeProjectsConditionInput
+) {
+  deleteEmployeeProjects(input: $input, condition: $condition) {
+    id
+    employee {
+      id
+      employeeName
+      age
+      createdAt
+      updatedAt
+      departmentEmployeesId
+      employeeDepartmentId
+      owner
+      __typename
+    }
+    project {
+      id
+      projectName
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    createdAt
+    updatedAt
+    employeeProjectsId
+    projectEmployeesId
+    owner
+    __typename
+  }
+}

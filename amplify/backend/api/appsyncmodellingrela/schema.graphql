@@ -1,0 +1,37 @@
+type Department @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  departmentName: String!  
+  manager: Employee @hasOne
+  employees: [Employee] @hasMany  
+}
+
+
+type Employee @model @auth(rules: [{allow: owner}]){
+  id: ID!
+  employeeName: String!
+  age: Int!  
+  department: Department @belongsTo
+  projects: [EmployeeProjects] @hasMany
+}
+
+
+type Project @model @auth(rules: [{allow: owner}]){
+  id: ID!
+  projectName: String! 
+  employees: [EmployeeProjects] @hasMany
+}
+
+
+type EmployeeProjects @model(queries:null) @auth(rules: [{allow: owner}]){
+  id: ID!  
+  employee: Employee @belongsTo
+  project: Project @belongsTo
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,337 @@
+# this is an auto generated file. This will be overwritten
+
+subscription OnCreateDepartment(
+  $filter: ModelSubscriptionDepartmentFilterInput
+  $owner: String
+) {
+  onCreateDepartment(filter: $filter, owner: $owner) {
+    id
+    departmentName
+    manager {
+      id
+      employeeName
+      age
+      createdAt
+      updatedAt
+      departmentEmployeesId
+      employeeDepartmentId
+      owner
+      __typename
+    }
+    employees {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    departmentManagerId
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateDepartment(
+  $filter: ModelSubscriptionDepartmentFilterInput
+  $owner: String
+) {
+  onUpdateDepartment(filter: $filter, owner: $owner) {
+    id
+    departmentName
+    manager {
+      id
+      employeeName
+      age
+      createdAt
+      updatedAt
+      departmentEmployeesId
+      employeeDepartmentId
+      owner
+      __typename
+    }
+    employees {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    departmentManagerId
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteDepartment(
+  $filter: ModelSubscriptionDepartmentFilterInput
+  $owner: String
+) {
+  onDeleteDepartment(filter: $filter, owner: $owner) {
+    id
+    departmentName
+    manager {
+      id
+      employeeName
+      age
+      createdAt
+      updatedAt
+      departmentEmployeesId
+      employeeDepartmentId
+      owner
+      __typename
+    }
+    employees {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    departmentManagerId
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateEmployee(
+  $filter: ModelSubscriptionEmployeeFilterInput
+  $owner: String
+) {
+  onCreateEmployee(filter: $filter, owner: $owner) {
+    id
+    employeeName
+    age
+    department {
+      id
+      departmentName
+      createdAt
+      updatedAt
+      departmentManagerId
+      owner
+      __typename
+    }
+    projects {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    departmentEmployeesId
+    employeeDepartmentId
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateEmployee(
+  $filter: ModelSubscriptionEmployeeFilterInput
+  $owner: String
+) {
+  onUpdateEmployee(filter: $filter, owner: $owner) {
+    id
+    employeeName
+    age
+    department {
+      id
+      departmentName
+      createdAt
+      updatedAt
+      departmentManagerId
+      owner
+      __typename
+    }
+    projects {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    departmentEmployeesId
+    employeeDepartmentId
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteEmployee(
+  $filter: ModelSubscriptionEmployeeFilterInput
+  $owner: String
+) {
+  onDeleteEmployee(filter: $filter, owner: $owner) {
+    id
+    employeeName
+    age
+    department {
+      id
+      departmentName
+      createdAt
+      updatedAt
+      departmentManagerId
+      owner
+      __typename
+    }
+    projects {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    departmentEmployeesId
+    employeeDepartmentId
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateProject(
+  $filter: ModelSubscriptionProjectFilterInput
+  $owner: String
+) {
+  onCreateProject(filter: $filter, owner: $owner) {
+    id
+    projectName
+    employees {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateProject(
+  $filter: ModelSubscriptionProjectFilterInput
+  $owner: String
+) {
+  onUpdateProject(filter: $filter, owner: $owner) {
+    id
+    projectName
+    employees {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteProject(
+  $filter: ModelSubscriptionProjectFilterInput
+  $owner: String
+) {
+  onDeleteProject(filter: $filter, owner: $owner) {
+    id
+    projectName
+    employees {
+      nextToken
+      __typename
+    }
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateEmployeeProjects(
+  $filter: ModelSubscriptionEmployeeProjectsFilterInput
+  $owner: String
+) {
+  onCreateEmployeeProjects(filter: $filter, owner: $owner) {
+    id
+    employee {
+      id
+      employeeName
+      age
+      createdAt
+      updatedAt
+      departmentEmployeesId
+      employeeDepartmentId
+      owner
+      __typename
+    }
+    project {
+      id
+      projectName
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    createdAt
+    updatedAt
+    employeeProjectsId
+    projectEmployeesId
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateEmployeeProjects(
+  $filter: ModelSubscriptionEmployeeProjectsFilterInput
+  $owner: String
+) {
+  onUpdateEmployeeProjects(filter: $filter, owner: $owner) {
+    id
+    employee {
+      id
+      employeeName
+      age
+      createdAt
+      updatedAt
+      departmentEmployeesId
+      employeeDepartmentId
+      owner
+      __typename
+    }
+    project {
+      id
+      projectName
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    createdAt
+    updatedAt
+    employeeProjectsId
+    projectEmployeesId
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteEmployeeProjects(
+  $filter: ModelSubscriptionEmployeeProjectsFilterInput
+  $owner: String
+) {
+  onDeleteEmployeeProjects(filter: $filter, owner: $owner) {
+    id
+    employee {
+      id
+      employeeName
+      age
+      createdAt
+      updatedAt
+      departmentEmployeesId
+      employeeDepartmentId
+      owner
+      __typename
+    }
+    project {
+      id
+      projectName
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    createdAt
+    updatedAt
+    employeeProjectsId
+    projectEmployeesId
+    owner
+    __typename
+  }
+}
